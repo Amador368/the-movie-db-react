@@ -1505,6 +1505,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@material-ui/icons@npm:^4.9.1":
+  version: 4.9.1
+  resolution: "@material-ui/icons@npm:4.9.1"
+  dependencies:
+    "@babel/runtime": ^7.4.4
+  peerDependencies:
+    "@material-ui/core": ^4.0.0
+    "@types/react": ^16.8.6
+    react: ^16.8.0
+    react-dom: ^16.8.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 2d7d8794570f62ac6dcaf4d6229c7dd197cdec26770aadf99c333e90a65e7a1801fd0dcd806f67b3ba8be66ef3392cb5e3eac53b236a50aea895d1964242700d
+  languageName: node
+  linkType: hard
+
 "@material-ui/styles@npm:^4.9.0":
   version: 4.9.0
   resolution: "@material-ui/styles@npm:4.9.0"
@@ -13609,6 +13626,7 @@ resolve@1.1.7:
   resolution: "the-movie-db-react@workspace:."
   dependencies:
     "@material-ui/core": ^4.9.1
+    "@material-ui/icons": ^4.9.1
     "@testing-library/jest-dom": ^4.2.4
     "@testing-library/react": ^9.3.2
     "@testing-library/user-event": ^7.1.2
