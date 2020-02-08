@@ -1,0 +1,10 @@
+.App {
+    padding-top: 100px;
+}
+.navLinks {
+    color: white;
+}
+.link__item {
+    color: white;
+    text-decoration: none;
+}

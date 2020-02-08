@@ -1,5 +1,5 @@
 import React from 'react'
 
 export default function NewMovies() {
-    return 'New Moviea'
+    return 'New Movies'
 }
