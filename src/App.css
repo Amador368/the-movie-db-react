@@ -1,5 +1,5 @@
 .App {
-    padding-top: 100px;
+    padding-top: 0;
 }
 .navLinks {
     color: white;
@@ -7,4 +7,24 @@
 .link__item {
     color: white;
     text-decoration: none;
+}
+.home__featured {
+    width: 60%;
+    margin-top: 4em;
+}
+.home__featured-title, .home__featured-subtitle, .home__featured-description {
+    color: #fff;
+}
+.home__featured-title {
+    font-size: 60px;
+    margin-bottom:0;
+}
+.home__featured-subtitle {
+    font-size: 1.2em;
+}
+.home__featured-description {
+    font-size: 1.2em;
+}
+.home_image-small {
+    width: 100%;
 }

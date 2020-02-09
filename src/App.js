@@ -26,6 +26,9 @@ import HeaderLogo from './components/header';
 
 const useStyles = makeStyles(theme => ({
   //
+  appBar: {
+    backgroundColor: 'rgba(0, 0, 0, 0.54)',
+  },
   navLinksContainer: {
     alignItems: 'center',
     display: 'flex',
@@ -82,22 +85,22 @@ const App = ({}) => {
     return (
       <div className="App jss1 jss2">
         <Router>
-          <AppBar>
+          <AppBar className={classes.appBar}>
             <Toolbar className={classes.toolBar}>
               <div className={classes.navLinksContainer}>
                 <HeaderLogo/>          
-                  <Button className="link">
-                    <Link to="/" className="link__item">Inicio</Link>
-                  </Button>
-                  <Button className="link" key="2">
-                    <Link to="/new-movies" className="link__item">Películas</Link>                  
-                  </Button>
-                  <Button className="link">
-                    <Link to="/new-series" className="link__item">Series</Link>
-                  </Button>
-                  <Button className="link">
-                    <Link to="/popular-movies" className="link__item">Más populares</Link>
-                  </Button> 
+                <Button className="link">
+                  <Link to="/" className="link__item">Inicio</Link>
+                </Button>
+                <Button className="link" key="2">
+                  <Link to="/new-movies" className="link__item">Películas</Link>                  
+                </Button>
+                <Button className="link">
+                  <Link to="/new-series" className="link__item">Series</Link>
+                </Button>
+                <Button className="link">
+                  <Link to="/popular-movies" className="link__item">Más populares</Link>
+                </Button> 
               </div>            
               <div className={classes.search}>
                 <div className={classes.searchIcon}>

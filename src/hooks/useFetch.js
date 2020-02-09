@@ -8,10 +8,16 @@ export default function useFetch(url, options){
     useEffect(() => {
         (async () => {
             try {
-
+                const res = await fetch(url, options);
+                const json = await res.json();
+                setLoading(false);
+                setResult(json);
             } catch (err) {
-                
+                setLoading(false);
+                setError(err);
             }
-        })
-    }, [])
+        })();
+    }, [options, url]);
+
+    return {loading, result, error};
 }
