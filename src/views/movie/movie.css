@@ -1,0 +1,26 @@
+.movie-detail__wrapper {
+    background-color: rgba(1,1,1,0.5);
+    width: 100%;
+    height: 100%;
+}
+.movie-detail__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.movie-detail__title, .movie-detail__overview, .movie-detail__date, .movie-detail__genre-title {
+    color: white;
+}
+.movie-detail__genre-title {
+    margin-bottom: .5em;
+}
+.movie-detail__title {
+    margin-bottom: 0;
+}
+.movie-detail__date {
+    font-weight: 400;
+    margin-top: 0;
+}
+.movie-detail__genre {
+    margin: 5px;
+}

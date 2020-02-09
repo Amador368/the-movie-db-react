@@ -18,7 +18,7 @@ import Home from './views/home';
 import NewMovies from './views/new-movies';
 import NewSeries from './views/new-series';
 import PopularMovies from './views/popular-movies';
-import Movie from './views/movie';
+import Movie from './views/movie/movie';
 import Error404 from './views/error404';
 //custom components
 import HeaderLogo from './components/header';

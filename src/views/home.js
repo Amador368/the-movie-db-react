@@ -1,7 +1,10 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import ButtonBase from '@material-ui/core/ButtonBase';
+
 import InfoIcon from '@material-ui/icons/Info';
 import Container from '@material-ui/core/Container';
 
@@ -34,7 +37,7 @@ export default function Home(){
     }
     const useStyles = makeStyles(theme => ({
         fixedMovie: {
-            backgroundColor: fade(theme.palette.common.white, 0.15),
+            backgroundColor: fade('rgb(1,1,1)', .9),
             backgroundImage: `url(${full_image_path})`,
             backgroundPosition: 'top',
             backgroundSize: 'cover',
@@ -48,6 +51,13 @@ export default function Home(){
         },
         homeButton: {
             textTransform: 'inherit'
+        },
+        homeButtonSmall: {
+            display: 'flex',
+            alignItems: 'flex-end'
+        },
+        link: {
+            textDecoration: 'none'
         }
     }));
     const classes = useStyles();
@@ -71,17 +81,20 @@ export default function Home(){
                                         <h2 className="home__featured-subtitle">{firstMovie.release_date}</h2>
                                         <p className="home__featured-description">{firstMovie.overview}</p>
                                         <div>
-                                        <Button
-                                            variant="contained"
-                                            color="secondary"
-                                            className={classes.homeButton}
-                                            startIcon={<InfoIcon />}>
-                                            Más información
-                                        </Button>
+                                            <Link className={classes.link} to={`/movie/${firstMovie.id}`}>
+                                                <Button
+                                                    variant="contained"
+                                                    color="secondary"
+                                                    className={classes.homeButton}
+                                                    startIcon={<InfoIcon />}>
+                                                    Más información
+                                                </Button>
+                                            </Link>                                        
                                         </div>
                                     </div>  
                                 ) : (
-                                    <div></div>
+                                    <div>
+                                    </div>
                                 )}                          
                             </Container>           
                         </div>
@@ -91,10 +104,13 @@ export default function Home(){
             {movies.result != null ? (
             <Grid container spacing={0}>
                 <Grid item xs={12} sm={6}>
-                    <Grid item xs={12}>                       
-                        <img className="home_image-small" src={getMediumImage(allMovies[0].backdrop_path)}></img>                       
+                    <Grid item xs={12}>
+                        <ButtonBase className={classes.homeButtonSmall}>                            
+                            <img className="home_image-small" src={getMediumImage(allMovies[0].backdrop_path)}></img>
+                            <p className="home_image-small__title">{allMovies[0].title}</p>
+                        </ButtonBase>                     
                     </Grid>
-                    <Grid container item xs={12}>
+                    <Grid container spacing={0} item xs={12}>
                         <Grid item xs={12} sm={6}>
                         <img className="home_image-small" src={getSmallImage(allMovies[1].backdrop_path)}></img>                       
                         </Grid>
@@ -104,7 +120,7 @@ export default function Home(){
                     </Grid>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <Grid container item xs={12}>
+                    <Grid container spacing={0} item xs={12}>
                         <Grid item xs={12} sm={6}>
                         <img className="home_image-small" src={getSmallImage(allMovies[3].backdrop_path)}></img>
                         </Grid>
