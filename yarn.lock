@@ -11211,6 +11211,17 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"query-string@npm:^6.10.1":
+  version: 6.10.1
+  resolution: "query-string@npm:6.10.1"
+  dependencies:
+    decode-uri-component: ^0.2.0
+    split-on-first: ^1.0.0
+    strict-uri-encode: ^2.0.0
+  checksum: 302e74e755accabd88762fbcfc6bda2dd127b8223276fc9d2d30ffc89b273dfc1347399b9e45c19d8d0e037f4a361ec9ce66d8bd7b8e16d679d39fb156f84cc7
+  languageName: node
+  linkType: hard
+
 "querystring-es3@npm:^0.2.0":
   version: 0.2.1
   resolution: "querystring-es3@npm:0.2.1"
@@ -12639,6 +12650,13 @@ resolve@1.1.7:
   languageName: node
   linkType: hard
 
+"split-on-first@npm:^1.0.0":
+  version: 1.1.0
+  resolution: "split-on-first@npm:1.1.0"
+  checksum: 7712c1553ef303b3ae66a361c2817da29dc56338edc02c47927df8880756683ee378b5f64e5028edef367c47ed2290e47a4a583a3ebd1415fe096ed74180cfde
+  languageName: node
+  linkType: hard
+
 "split-string@npm:^3.0.1, split-string@npm:^3.0.2":
   version: 3.1.0
   resolution: "split-string@npm:3.1.0"
@@ -12777,6 +12795,13 @@ resolve@1.1.7:
   version: 1.1.0
   resolution: "strict-uri-encode@npm:1.1.0"
   checksum: 07402f43cdfc5f64fa8e6515da3d7383502739547d906e7426ee272f6db0a6b2ef87994e0ba81991b5c021e9040fe1ab6f7626f1bbf8f534907f461e52bd5bd9
+  languageName: node
+  linkType: hard
+
+"strict-uri-encode@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "strict-uri-encode@npm:2.0.0"
+  checksum: 77a40129a8cbae92f1c069b68bea0b53037e9d37f830435d1d6291b49315474d8185fe5cb4ec410bb44e97466432a3970ac9e0efdb33cf36de2499f6ebabdba7
   languageName: node
   linkType: hard
 
@@ -13182,6 +13207,7 @@ resolve@1.1.7:
     "@testing-library/jest-dom": ^4.2.4
     "@testing-library/react": ^9.3.2
     "@testing-library/user-event": ^7.1.2
+    query-string: ^6.10.1
     react: ^16.12.0
     react-dom: ^16.12.0
     react-router-dom: ^5.1.2

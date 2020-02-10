@@ -20,6 +20,7 @@ import NewSeries from './views/new-series';
 import PopularMovies from './views/popular-movies';
 import Movie from './views/movie/movie';
 import Error404 from './views/error404';
+import Search from './views/search';
 //custom components
 import HeaderLogo from './components/header';
 
@@ -134,6 +135,9 @@ const App = ({}) => {
                 </Route>
                 <Route path="/movie/:id" exact={true}>
                   <Movie></Movie>
+                </Route>
+                <Route path="/search" exact={true}>
+                  <Search/>
                 </Route>
                 <Route path="*">
                   <Error404></Error404>
