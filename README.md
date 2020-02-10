@@ -6,6 +6,8 @@ In the project directory, you can run:
 
 ### `yarn start` (YARN)
 
+### `OR:`
+
 ### `npm install` then `npm start` (NPM)
 
 Runs the app in the development mode.<br />
