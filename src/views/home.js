@@ -70,7 +70,7 @@ export default function Home(){
     }
     return (
         <div className="home__movies">
-            <Grid container spacing={3}>
+            <Grid container>
                 <Grid item xs={12}>
                     <Paper className="paper">
                         <div className={classes.fixedMovie}>                            
@@ -136,7 +136,6 @@ export default function Home(){
             ) : (
                 <div></div>
             )}
-
         </div>
     )
 }

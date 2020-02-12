@@ -65,20 +65,17 @@ function SearchInput(props) {
         );
         let movies = await response.json();
         if(s == "") {
-            //props.goBack();
-            //debugger
-            //history.goForward()
-            //debugger
+            //back to original route
         }
         if(movies.errors){
-            console.log("query", s)
             movies = []
+            setMovieList(movies);
         } else {
 
         }
         setSearchValue(s);
-        
         setMovieList(movies);
+        //debugger
         props.callbackFromParent(movies)
         })();
     }, [location.search]);
