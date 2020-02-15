@@ -66,6 +66,7 @@ function SearchInput(props) {
         let movies = await response.json();
         if(s == "") {
             //back to original route
+            history.push('/')
         }
         if(movies.errors){
             movies = []

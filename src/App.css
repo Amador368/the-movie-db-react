@@ -26,6 +26,7 @@
     font-size: 1.2em;
 }
 .home_image-small {
+    height: 100%;
     width: 100%;
 }
 .home_image-small__title {

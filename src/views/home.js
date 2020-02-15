@@ -103,35 +103,13 @@ export default function Home(){
             </Grid>
             {movies.result != null ? (
             <Grid container spacing={0}>
-                <Grid item xs={12} sm={6}>
-                    <Grid item xs={12}>
-                        <ButtonBase className={classes.homeButtonSmall}>                            
-                            <img className="home_image-small" src={getMediumImage(allMovies[0].backdrop_path)}></img>
-                            <p className="home_image-small__title">{allMovies[0].title}</p>
-                        </ButtonBase>                     
-                    </Grid>
-                    <Grid container spacing={0} item xs={12}>
-                        <Grid item xs={12} sm={6}>
-                        <img className="home_image-small" src={getSmallImage(allMovies[1].backdrop_path)}></img>                       
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                        <img className="home_image-small" src={getSmallImage(allMovies[2].backdrop_path)}></img>                       
-                        </Grid>
-                    </Grid>
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                    <Grid container spacing={0} item xs={12}>
-                        <Grid item xs={12} sm={6}>
-                        <img className="home_image-small" src={getSmallImage(allMovies[3].backdrop_path)}></img>
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                        <img className="home_image-small" src={getSmallImage(allMovies[4].backdrop_path)}></img>
-                        </Grid>
-                    </Grid>
-                    <Grid item xs={12}>
-                    <img className="home_image-small" src={getMediumImage(allMovies[5].backdrop_path)}></img>
-                    </Grid>
-                </Grid>
+                {allMovies.map((movie) => 
+                 <Grid item xs={12} sm={4} md={3} key={movie.id} spacing={0}>
+                    <Link className={classes.link} to={`/movie/${movie.id}`}>
+                        <img className="home_image-small" src={getSmallImage(movie.backdrop_path)}></img>
+                    </Link>
+                 </Grid>
+                )}                   
             </Grid>
             ) : (
                 <div></div>
