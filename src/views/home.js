@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import ButtonBase from '@material-ui/core/ButtonBase';
 
 import InfoIcon from '@material-ui/icons/Info';
 import Container from '@material-ui/core/Container';
@@ -21,7 +20,7 @@ export default function Home(){
     let image_path = 'https://image.tmdb.org/t/p/original';
     let full_image_path = null;
     let small_image_path = 'https://image.tmdb.org/t/p/w500_and_h282_face'
-    let medium_image_path = 'https://image.tmdb.org/t/p/w1000_and_h563_face';
+    //let medium_image_path = 'https://image.tmdb.org/t/p/w1000_and_h563_face';
     let firstMovie = null;
     let allMovies = null;
 
@@ -65,9 +64,9 @@ export default function Home(){
     function getSmallImage(id){
         return small_image_path + id;
     }
-    function getMediumImage(id){
+    /*function getMediumImage(id){
         return medium_image_path + id;
-    }
+    }*/
     return (
         <div className="home__movies">
             <Grid container>
@@ -104,9 +103,10 @@ export default function Home(){
             {movies.result != null ? (
             <Grid container spacing={0}>
                 {allMovies.map((movie) => 
-                 <Grid item xs={12} sm={4} md={3} key={movie.id} spacing={0}>
+                 <Grid className="grid-image__item" item xs={12} sm={4} md={3} key={movie.id} >
                     <Link className={classes.link} to={`/movie/${movie.id}`}>
-                        <img className="home_image-small" src={getSmallImage(movie.backdrop_path)}></img>
+                        <img className="home_image-small" alt={movie.title} src={getSmallImage(movie.backdrop_path)}>                            
+                        </img>
                     </Link>
                  </Grid>
                 )}                   

@@ -51,7 +51,7 @@ export default function Movie(){
                                 {hasMovie() ?(
                                     <Grid container spacing={0} item xs={12}>
                                         <Grid item xs={12} sm={6} md={4}>
-                                            <img src={getPosterImage(movieDetail.poster_path)}></img>                                         
+                                            <img alt={movieDetail.title} src={getPosterImage(movieDetail.poster_path)}></img>                                         
                                         </Grid>
                                         <Grid item xs={12} sm={6} md={8}>
                                             <h1 className="movie-detail__title">{movieDetail.title}</h1>

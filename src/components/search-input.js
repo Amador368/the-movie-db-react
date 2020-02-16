@@ -64,7 +64,7 @@ function SearchInput(props) {
             `${URL_API}/search/movie?api_key=${API_KEY}&language=es-ES&query=${s}&page=1`
         );
         let movies = await response.json();
-        if(s == "") {
+        if(s === "") {
             //back to original route
             history.push('/')
         }

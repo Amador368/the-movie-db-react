@@ -42,7 +42,7 @@ function Search(props){
                     )} 
                 </Grid>
             )}
-            {(movies && movies.length == 0) && (
+            {(movies && movies.length === 0) && (
                 <div>Sin resultados</div>
             )}
             </div>

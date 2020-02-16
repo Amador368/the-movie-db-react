@@ -1,5 +1,4 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
 import './header.css';
 import {ReactComponent as Logo} from './logo.svg'
 
